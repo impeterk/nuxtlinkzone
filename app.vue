@@ -1,5 +1,19 @@
+<script setup lang="ts">
+</script>
+
 <template>
-  <div>
-    <p class="font-sans">Hello</p>
-  </div>
+  <NuxtLoadingIndicator />
+    <NuxtLayout >
+      <UContainer>
+        <NuxtPage />
+      </UContainer>
+    </NuxtLayout>
 </template>
+
+<style>
+html,body,#__nuxt {
+  height: 100%;
+  
+}
+
+</style>

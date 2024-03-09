@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/fonts", '@nuxt/image','@nuxt/ui'] ,
+  colorMode: {
+    preference: 'light'
+  },
   fonts: {
     families: [
       {
