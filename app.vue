@@ -12,8 +12,7 @@
 
 <style>
 html,body,#__nuxt {
-  height: 100%;
-  
+  @apply h-full font-sans
 }
 
 </style>

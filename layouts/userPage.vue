@@ -6,18 +6,18 @@
 
 <template>
   <div class="layout">
-<main class="py-8">
+    <main class="py-8">
 
-    <slot />
-</main>
+      <slot />
+    </main>
     <Footer />
   </div>
 </template>
 
 <style scoped>
-.layout{
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: 1fr auto;
+.layout {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 </style>
