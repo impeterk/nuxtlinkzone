@@ -1,9 +1,17 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+
+</script>
 
 <template>
-  <div>
-    Page: {{ $route.params.userpage }}
-  </div>
+  <Suspense>
+  <!-- component with nested async dependencies -->
+  <Page />
+
+  <!-- loading state via #fallback slot -->
+  <template #fallback>
+    <PageSkeleton /> 
+  </template>
+</Suspense>
 </template>
 
 <style scoped></style>

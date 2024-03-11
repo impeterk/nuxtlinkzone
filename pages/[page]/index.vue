@@ -3,10 +3,19 @@ definePageMeta({
   layout: 'user-page'
 })
 </script>
-    <template>
-  <div>
-    Page: {{$route.params.page}}
+<template>
+  <Suspense>
+  <!-- component with nested async dependencies -->
+  <div class="max-w-4xl mx-auto">
+    
+    <Page />
   </div>
+
+  <!-- loading state via #fallback slot -->
+  <template #fallback>
+    <PageSkeleton /> 
+  </template>
+</Suspense>
 </template>
 
 <style scoped></style>

@@ -1,6 +1,10 @@
 <script lang="ts" setup>
-const pages = useState('userPages', () => [{ name: 'fesak' }, { name: 'peter' }, { name: 'test' }, { name: 'digon' }])
+const route = useRoute()
+const pages = useUserPages()
 
+if (route.name === 'dashboard-pages' && pages.value?.length > 0) {
+  navigateTo(`/dashboard/pages/${pages.value[0].name}`)
+}
 </script>
 
 <template>
@@ -17,9 +21,9 @@ const pages = useState('userPages', () => [{ name: 'fesak' }, { name: 'peter' },
           </li>
         </ul>
       </section>
-      <section class="col-span-4">
+      <section class="col-span-4 max-h-[80dvh] overflow-y-auto p-1">
         <span v-if="pages.length === 0" class="text-primary">You have not yet crated any page</span>
-        <NuxtPage />
+          <NuxtPage />
       </section>
     </section>
   </div>
