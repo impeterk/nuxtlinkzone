@@ -8,7 +8,7 @@ const currentPage = useUserPages().value.filter((page) => page.name === (route.p
 <template>
 <article>
     <UContainer>
-      <PageHeader :name="currentPage.name" :image="currentPage.image" />
+      <PageHeader :name="currentPage?.name" :image="currentPage?.image" />
       <main class="mt-20">
         <ul class="space-y-6">
 
