@@ -1,16 +1,16 @@
 <script lang="ts" setup>
 const props = defineProps({
 href: {
-  type: String,
+  type: String || null,
   default: null
 },
 name: {
-  type: String,
+  type: String || null,
   default: null
 },
 icon: {
   type: String,
-  default: null
+  default: undefined
 }
 
 })
@@ -21,7 +21,7 @@ icon: {
   <UCard :ui="{strategy: 'override', body: {padding: 'p-0'}}">
     <UButton block variant="ghost" size="xl" class="flex justify-center items-center h-12 text-gray dark:text-gray">
 
-      <Icon :name="icon" />
+      <Icon :name="icon" v-if="icon"/>
         <span>
           {{name}}
         </span>

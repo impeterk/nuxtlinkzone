@@ -14,9 +14,21 @@ const links = [{
 <template>
   
   <UContainer class="w-full">
-      <footer class="border-t flex items-center justify-center border-gray-200 dark:border-gray-800/80 py-2">
-      Copyright © {{ new Date().getFullYear() }}
-      <ThemeSwitch />
+      <footer class="border-t flex items-center justify-center border-gray-200 dark:border-gray-800/80 py-2 font-mono relative gap-2">
+      <span>
+        NaPDevelopers 
+      </span>
+      <span>
+        &copy;
+      </span>
+      <span>
+
+        {{ new Date().getFullYear() }}
+      </span>
+      <span class="absolute right-8" >
+
+        <ThemeSwitch />
+      </span>
     </footer>
     </UContainer>
 

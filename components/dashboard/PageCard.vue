@@ -18,7 +18,7 @@ const variant = computed(() => {
     <NuxtLink :to="`/dashboard/pages/${name}`">
       <UCard 
       :ui="{strategy: 'override', body: {padding: 'p-0'}}">
-      <UButton :variant class="h-full w-full px-6 py-8 sm:p-10">
+      <UButton :variant class="h-full w-full px-6 py-8 sm:p-10 justify-center text-lg">
         {{ name }}
       </UButton>
     </UCard>
